@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>给子木的一封信</title>	    
+		<title>给小睿睿的一封信</title>	    
         <link type="text/css" rel="stylesheet" href="./file/default.css">
 		<script type="text/javascript" src="./file/jquery.min.js"></script>
 		<script type="text/javascript" src="./file/jscex.min.js"></script>
@@ -30,15 +30,15 @@
                       <span class="say">我愿意，用一世把你捧在手心里</span><br>
                       <span class="say">执子之手，与子偕老</span><br>
                       <span class="say">是我一直的心愿</span><br>
-			<span class="say">李佩文，我爱你</span><br>
-                      <span class="say"><span class="space"></span> -- 傻傻的子森</span> </font>
+			<span class="say">刘睿，我爱你</span><br>
+                      <span class="say"><span class="space"></span> -- 子森</span> </font>
                           <br />
                           <br />
                       </p>
                     </div>
                   </div>
                 <div id="clock-box">
-                    <span class="STYLE1"></span><font color="#33CC00">子木，我们在一起</font>
+                    <span class="STYLE1"></span><font color="#33CC00">小睿睿，我们在一起</font>
 <span class="STYLE1">已经……</span>
                   <div id="clock"></div>
               </div>
@@ -160,49 +160,4 @@
             tree.snapshot("p2", 500, 0, 610, 680);
 
             // 会有闪烁不得意这样做, (＞﹏＜)
-            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
-            canvas.css("background", "#ffe");
-            $await(Jscex.Async.sleep(300));
-            canvas.css("background", "none");
-        }));
-
-        var jumpAnimate = eval(Jscex.compile("async", function () {
-            var ctx = tree.ctx;
-            while (true) {
-                tree.ctx.clearRect(0, 0, width, height);
-                tree.jump();
-                foot.draw();
-                $await(Jscex.Async.sleep(25));
-            }
-        }));
-
-        var textAnimate = eval(Jscex.compile("async", function () {
-		    var together = new Date();
-		    together.setFullYear(2018,6, 01); 			//时间年月日
-		    together.setHours(13);						//小时	
-		    together.setMinutes(14);					//分钟
-		    together.setSeconds(0);					//秒前一位
-		    together.setMilliseconds(0);				//秒第二位
-
-		    $("#code").show().typewriter();
-            $("#clock-box").fadeIn(500);
-            while (true) {
-                timeElapse(together);
-                $await(Jscex.Async.sleep(1000));
-            }
-        }));
-
-        var runAsync = eval(Jscex.compile("async", function () {
-            $await(seedAnimate());
-            $await(growAnimate());
-            $await(flowAnimate());
-            $await(moveAnimate());
-
-            textAnimate().start();
-
-            $await(jumpAnimate());
-        }));
-
-        runAsync().start();
-    })();
-    </script></body></html>
+            canvas.parent().css("background", "url(" + tree.toDataURL
